@@ -6,12 +6,14 @@
   "scripts": {
     "test": "jest --config=jest.config.js",
     "start": "webpack serve --mode development --open --hot --history-api-fallback --config config/webpack.dev.js",
-    "build": "webpack --mode production --config config/webpack.prod.js"
+    "build": "webpack --mode production --config config/webpack.prod.js",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
-  "husky":{
-    "hooks":{
-      "pre-commit": "npm run test"
-    }
+  "lint-staged":{
+    "src/**/*.(js|ts)?(x)": [
+      "eslint"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -38,6 +40,7 @@
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.1",
     "jest-svg-transformer": "^1.0.0",
+    "lint-staged": "^11.1.1",
     "prettier": "^2.3.2",
     "style-loader": "^3.2.1",
     "terser-webpack-plugin": "^5.1.4",
