@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "strictNullChecks": true,
+      "noEmit": true,
+      "noImplicitAny": true,
+      "jsx": "react",
+      "lib": ["es6", "dom"],
+      "module": "commonjs",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": ""
+    },
+    "include": ["./src"],
+    "exclude": ["node_modules", "build"]
+  }
